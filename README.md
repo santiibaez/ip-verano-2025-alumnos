@@ -80,7 +80,7 @@ Si bien no es un parámetro de evaluación dónde colocan las funciones, es alta
 
 **Concluido su desarrollo, deberían ver algo como lo siguiente:**
 ![imagen](https://i.ibb.co/bmS9f2H/image.png)
-###### Notar el borde que posee cada imagen.
+###### Notar el borde que posee cada imagen. ATENCIÓN: el nombre alternativo (ejemplo: "The Chosen One" -El elegido- para Harry Potter) debe ser escogido al azar.
 
 ### 📝 Condiciones de entrega
 
