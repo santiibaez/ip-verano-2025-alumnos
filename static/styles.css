@@ -140,13 +140,3 @@ table.table td i {
     margin-top: 6px;
     font-size: 95%;
 }
-
-/* .nav-item a {
-    color: red;
-} */
-
-.card-img-top {
-    width: 80%;
-    aspect-ratio: 4/12;
-    object-fit: cover;
-}

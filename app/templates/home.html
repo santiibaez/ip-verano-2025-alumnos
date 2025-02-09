@@ -37,13 +37,12 @@
             <!-- evaluar si la imagen pertenece a Gryffindor, Slytherin u otro -->
             <!--usamos django para aplicar condicionales-->
             {% if img.house == 'Gryffindor' %}
-                <div class="card mb-3 ms-5" style="max-width: 540px; border-color: green;">
+            <div class="card mb-3 ms-5 h-100" style="max-width: 540px; border-color: green;"> <!-- agregamos h-100 a class para que las tarjetas mantengan la misma altura esstablece la altura de un elemnto al 100% del contenedor padre)-->
             {% elif img.house == 'Slytherin' %}
-                <div class="card mb-3 ms-5" style="max-width: 540px; border-color: red;">
+            <div class="card mb-3 ms-5 h-100" style="max-width: 540px; border-color: red;"> <!-- agregamos h-100 a class para que las tarjetas mantengan la misma altura esstablece la altura de un elemnto al 100% del contenedor padre)-->
             {% else %}
-                <div class="card mb-3 ms-5" style="max-width: 540px; border-color: orange;">
+            <div class="card mb-3 ms-5 h-100" style="max-width: 540px; border-color: orange;"> <!-- agregamos h-100 a class para que las tarjetas mantengan la misma altura (esstablece la altura de un elemnto al 100% del contenedor padre)-->
             {% endif %}
-            
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="{{ img.image }}" class="card-img-top" alt="imagen">
@@ -79,6 +78,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
         {% endfor %} {% endif %}
     </div>
