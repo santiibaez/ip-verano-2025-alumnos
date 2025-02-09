@@ -1,7 +1,7 @@
 # capa de servicio/lógica de negocio
 #from ..transport import transport 
 import random
-from ..transport.transport import traerTodasLasImagenes
+from ..transport import transport
 from ..persistence import repositories
 from ..utilities.translator import fromRequestIntoCard, fromRepositoryIntoCard, fromTemplateIntoCard
 from django.contrib.auth import get_user
@@ -10,7 +10,7 @@ from django.contrib.auth import get_user
 def getAllImages():
     # debe ejecutar los siguientes pasos:
     # 1) traer un listado de imágenes crudas desde la API (ver transport.py)
-    raw_images = traerTodasLasImagenes()
+    raw_images = transport.getAllImages()
     # 2) convertir cada img. en una card.
     cards = []
     for image in raw_images:
