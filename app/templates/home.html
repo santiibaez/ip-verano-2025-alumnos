@@ -54,7 +54,7 @@
                             <p class="card-text">
                                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                     <strong><em>{{ img.alternate_names }}</em></strong>
-                                    <!--<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </p>
                             <p class="card-text"><small class="text-body-secondary">Género 🧒👧: {{ img.gender }}</small></p>
@@ -71,7 +71,7 @@
                                 <input type="hidden" name="actor" value="{{ img.actor }}">
                                 <input type="hidden" name="image" value="{{ img.image }}"> {% if img in favourite_list %}
                                 <button type="submit" class="btn btn-primary btn-sm float-left" style="color:white" disabled>✔️ Favoritos</button> {% else %}
-                                <button type="submit" class="btn btn-primary btn-sm float-left" style="color:white">❤️ Favoritos</button> {% endif %}
+                                <button type="submit" class="btn btn-primary btn-sm float-left" style="color:white">🌟 Favoritos</button> {% endif %}
                             </form>
                         </div>
                         {% endif %}
