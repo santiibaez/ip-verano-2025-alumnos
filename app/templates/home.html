@@ -1,7 +1,6 @@
 {% extends 'header.html' %} {% block content %}
 <main>
     <h1 class="text-center">Buscador de personajes de Harry Potter</h1>
-    <!buscador>
     <div class="d-flex justify-content-center" style="margin-bottom: 1%">
         <!-- Buscador del sitio -->
         <form class="d-flex" action="{% url 'buscar' %}" method="POST">
@@ -12,7 +11,7 @@
     </div>
 
 
-    --filtrar por casas--
+    <!--filtrar por casas-->
     <div class="d-flex gap-1 col-2 mx-auto mb-3">
         <form method="post" action="{% url 'filter_by_house' %}">
             {% csrf_token %}
@@ -28,7 +27,7 @@
     </div>
 
 
-    --cartas--
+    <!--cartas-->
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% if images|length == 0 %}
         <h2 class="text-center">La búsqueda no arrojó resultados...</h2>
@@ -36,6 +35,7 @@
         {% for img in images %}
         <div class="col">
             <!-- evaluar si la imagen pertenece a Gryffindor, Slytherin u otro -->
+            <!--usamos django para aplicar condicionales-->
             {% if img.house == 'Gryffindor' %}
                 <div class="card mb-3 ms-5" style="max-width: 540px; border-color: green;">
             {% elif img.house == 'Slytherin' %}
