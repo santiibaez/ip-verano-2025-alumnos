@@ -2,6 +2,8 @@
 
 from django.shortcuts import redirect, render
 from .layers.services.services import getAllImages # Importar la función getAllImages
+from .layers.services.services import filterByCharacter
+from .layers.services.services import filterByHouse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 
@@ -19,12 +21,13 @@ def home(request):
 # función utilizada en el buscador.
 def search(request):
     name = request.POST.get('query', '')
-
     # si el usuario ingresó algo en el buscador, se deben filtrar las imágenes por dicho ingreso.
     if (name != ''):
-        images = []
+        images = filterByCharacter(name)
         favourite_list = []
-
+        #creamos nueva lista para guardar solo las coincidencias
+        #Recorremos cada imagen hasta encontrar coincidencias      
+        #Devolvemos la lissta con las coincidencias        
         return render(request, 'home.html', { 'images': images, 'favourite_list': favourite_list })
     else:
         return redirect('home')
@@ -34,7 +37,7 @@ def filter_by_house(request):
     house = request.POST.get('house', '')
 
     if house != '':
-        images = [] # debe traer un listado filtrado de imágenes, según la casa.
+        images = filterByHouse(house) # debe traer un listado filtrado de imágenes, según la casa.
         favourite_list = []
 
         return render(request, 'home.html', { 'images': images, 'favourite_list': favourite_list })
