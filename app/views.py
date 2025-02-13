@@ -2,14 +2,13 @@
 
 from django.shortcuts import redirect, render
 from .layers.services.services import getAllImages # Importar la función getAllImages
-from .layers.services.services import filterByCharacter
-from .layers.services.services import filterByHouse
+from .layers.services.services import filterByCharacter, filterByHouse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from .layers.services.services import getAllFavourites
-from .layers.services.services import saveFavourite
+from .layers.services.services import getAllFavourites, saveFavourite, deleteFavourite
 from .layers.services import services
-from .layers.services.services import deleteFavourite
+
+
 
 def index_page(request):
     return render(request, 'index.html')

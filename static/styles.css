@@ -140,3 +140,40 @@ table.table td i {
     margin-top: 6px;
     font-size: 95%;
 }
+
+.navbar {
+    font-family: 'Georgia', serif; 
+    color: gray; 
+    font-size: 1.9rem;
+}
+
+.navbar a {
+    color: gray; 
+    text-decoration: none;
+    font-size: 1.9rem;
+}
+
+.navbar a:hover {
+    color:#2f2f2f;
+}
+
+.text-center {
+    font-family: 'Georgia', serif; 
+    color: #464545;
+    font-size: 1.7rem; 
+    text-align: center; 
+    margin-top:20px;
+}
+
+.card {
+    border: 1px solid #dee2e6;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+}
