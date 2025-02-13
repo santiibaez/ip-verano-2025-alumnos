@@ -142,7 +142,6 @@ table.table td i {
 }
 
 .navbar {
-    font-family: 'Georgia', serif; 
     color: gray; 
     font-size: 1.9rem;
 }
@@ -157,16 +156,11 @@ table.table td i {
     color:#2f2f2f;
 }
 
-.text-center {
-    font-family: 'Georgia', serif; 
+.text-center { 
     color: #464545;
     font-size: 1.7rem; 
     text-align: center; 
     margin-top:20px;
-}
-
-.card {
-    border: 1px solid #dee2e6;
 }
 
 .card-title {
